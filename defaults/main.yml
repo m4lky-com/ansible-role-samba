@@ -4,4 +4,4 @@ mountpoint: "/home/malcolm/samba"
 username: "malcolm"
 password: "password"
 
-cifs-package: cifs-utils
+cifs_package: cifs-utils

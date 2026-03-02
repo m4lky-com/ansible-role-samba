@@ -1,9 +1,10 @@
 ---
 - name: Install prerequisite packages
   ansible.builtin.apt:
-    name: "{{ cifs-package }}"
+    name: "{{ cifs_package }}"
     state: present
     update_cache: true
+    cache_valid_time: 3600
 
 - name: check mountpoint exist
   ansible.builtin.file:
