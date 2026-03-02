@@ -1,6 +1,10 @@
----
+# Playbook to run Samba install role
+#
+# Example command
+# ansible-playbook test.yml
+
 - hosts: localhost
   connection: local
   become: true
   roles:
-    - ansible-role-samba
+   - ansible-role-samba

@@ -3,3 +3,5 @@ mycifs: "//truenas.m4lky.com/SMB-Share/"
 mountpoint: "/home/malcolm/samba"
 username: "malcolm"
 password: "password"
+
+cifs-package: cifs-utils
