@@ -1,0 +1,22 @@
+---
+- name: Install prerequisite packages
+  ansible.builtin.apt:
+    name: "{{ cifs-package }}"
+    state: present
+    update_cache: true
+
+- name: check mountpoint exist
+  ansible.builtin.file:
+    path: "{{ mountpoint }}"
+    state: directory
+    mode: '0755'
+    owner: malcolm
+    group: malcolm
+
+- name: mount network share
+  ansible.posix.mount:
+    src: "{{ mycifs }}"
+    path: "{{ mountpoint }}"
+    fstype: cifs
+    opts: 'username={{ username }},password={{ password }}'
+    state: mounted

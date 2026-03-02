@@ -1,0 +1,15 @@
+galaxy_info:
+  namespace: m4lky
+  version: 1.0.0
+  role_name: ansible-role-samba
+  description: Samba setup
+  min_ansible_version: "2.12"
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
+        - focal
+
+dependencies: []
+
